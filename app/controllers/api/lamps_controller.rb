@@ -21,4 +21,16 @@ class Api::LampsController < ApplicationController
     render 'show.json.jb'
   end
 
+  def update
+    @lamp = Lamp.find_by(id: params[:id])
+
+    @lamp.update(
+      color: params[:color] || @lamp.color,
+      size: params[:size] || @lamp.size,
+      price: params[:price] || @lamp.price
+    )
+
+    render 'show.json.jb'
+  end
+
 end
