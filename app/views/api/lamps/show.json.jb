@@ -1,4 +1,5 @@
 {
+  id: @lamp.id,
   color: @lamp.color,
   size: @lamp.size,
   price: @lamp.price
