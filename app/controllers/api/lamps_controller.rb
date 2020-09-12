@@ -33,4 +33,11 @@ class Api::LampsController < ApplicationController
     render 'show.json.jb'
   end
 
+  def destroy
+    @lamp = Lamp.find_by(id: params[:id])
+    @lamp.destroy
+
+    render json: {message: "You have successfully put 'lights out' for your lamp!"}
+  end
+
 end

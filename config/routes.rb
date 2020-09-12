@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     post "/lamps" => "lamps#create"
     get "/lamps/:id" => "lamps#show"
     patch "/lamps/:id" => "lamps#update"
+    delete "/lamps/:id" => "lamps#destroy"
+
 
   end
 end
